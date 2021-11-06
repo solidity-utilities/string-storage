@@ -1,0 +1,24 @@
+{
+  "package_name": "string-storage",
+  "version": "0.0.1",
+  "description": "Solidity contract for storing and interacting with key/value string pairs",
+  "authors": ["S0AndS0 <https://github.com/S0AndS0>"],
+  "links": {
+    "website": "https://solidity-utilities.github.io/string-storage/",
+    "documentation": "https://github.com/solidity-utilities/string-storage#readme",
+    "repository": "https://github.com/solidity-utilities/string-storage"
+  },
+  "keywords": [
+    "ethereum",
+    "library",
+    "mapping",
+    "solidity",
+    "string",
+    "truffle"
+  ],
+  "license": "AGPL-3.0",
+  "manifest": "ethpm/3",
+  "dependencies": {
+    "library-mapping-string": "^0.0.3"
+  }
+}

@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source Git branch
+        uses: actions/checkout@v2
+        with:
+            ref: main
+            fetch-depth: 10
+            submodules: true
+            persist-credentials: false
+
+      # https://github.com/actions/setup-node/issues/214
+      - name: Reconfigure Git to use HTTP authentication
+        run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies via NPM
+        run: npm ci
+
+      - name: Start Ganache CLI as background service
+        run: npm run ganache-cli 1>/dev/null &
+
+      - name: Run CI/CD tests
+        run: npm test
+

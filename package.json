@@ -1,0 +1,50 @@
+{
+  "name": "@solidity-utilities/string-storage",
+  "version": "0.0.1",
+  "description": "Solidity contract for storing and interacting with key/value string pairs",
+  "main": "null",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "ganache-cli": "ganache-cli",
+    "size": "truffle run contract-size",
+    "soldocgen": "soldocgen --output gitbook --ignore Migrations.sol docs/ contracts/",
+    "test": "truffle test",
+    "truffle-contract-size": "truffle run contract-size",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solidity-utilities/string-storage.git"
+  },
+  "keywords": [
+    "contract",
+    "ethereum",
+    "solidity",
+    "string",
+    "truffle"
+  ],
+  "author": "S0AndS0",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/solidity-utilities/string-storage/issues"
+  },
+  "homepage": "https://github.com/solidity-utilities/string-storage#readme",
+  "funding": {
+    "type": "individual",
+    "url": "https://liberapay.com/solidity-utilities/"
+  },
+  "dependencies": {
+    "@solidity-utilities/library-mapping-string": "^0.0.3"
+  },
+  "devDependencies": {
+    "@solidity-utilities/address-storage": "^0.2.1",
+    "ganache-cli": "^6.12.2",
+    "husky": "^7.0.4",
+    "soldocgen": "^0.0.3",
+    "truffle": "^5.4.17",
+    "truffle-contract-size": "^2.0.1"
+  }
+}

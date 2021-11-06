@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# shellcheck source=.husky/_/husky.sh
+source "$(dirname "$0")/_/husky.sh"
+
+npm test
