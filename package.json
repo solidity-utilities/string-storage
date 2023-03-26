@@ -42,7 +42,7 @@
   "devDependencies": {
     "@solidity-utilities/address-storage": "^0.2.1",
     "ganache-cli": "^6.12.2",
-    "husky": "^7.0.4",
+    "husky": "^8.0.3",
     "soldocgen": "^0.0.3",
     "truffle": "^5.4.18",
     "truffle-contract-size": "^2.0.1"
